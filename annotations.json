@@ -1,18 +1,18 @@
 {
 "train": 
 {
-"1.png": {"mask_path":"./dataset/train/masks/1.png"},
-"2.png": {"mask_path":"./dataset/train/masks/2.png"},
-"3.png": {"mask_path":"./dataset/train/masks/3.png"},
-"4.png": {"mask_path":"./dataset/train/masks/4.png"},
-"5.png": {"mask_path":"./dataset/train/masks/5.png"},
-"6.png": {"mask_path":"./dataset/train/masks/6.png"},
-"7.png": {"mask_path":"./dataset/train/masks/7.png"},
-"10.png": {"mask_path":"./dataset/train/masks/10.png"}
+"1.jpg": {"mask_path":"./dataset/train/masks/1.jpg"},
+"2.jpg": {"mask_path":"./dataset/train/masks/2.jpg"},
+"3.jpg": {"mask_path":"./dataset/train/masks/3.jpg"},
+"4.jpg": {"mask_path":"./dataset/train/masks/4.jpg"},
+"5.jpg": {"mask_path":"./dataset/train/masks/5.jpg"},
+"6.jpg": {"mask_path":"./dataset/train/masks/6.jpg"},
+"7.jpg": {"mask_path":"./dataset/train/masks/7.jpg"},
+"10.jpg": {"mask_path":"./dataset/train/masks/10.jpg"}
 },
 "test": 
-{"8.png" : {"mask_path":"./dataset/test/masks/8.png"},
-"9.png" : {"mask_path":"./dataset/test/masks/9.png"}
+{"8.jpg" : {"mask_path":"./dataset/test/masks/8.jpg"},
+"9.jpg" : {"mask_path":"./dataset/test/masks/9.jpg"}
 }
 
 }
