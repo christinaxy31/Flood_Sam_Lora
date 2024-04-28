@@ -53,7 +53,15 @@ class Samprocessor:
         """
         nd_image = np.array(image)
         input_image = self.transform.apply_image(nd_image)
-        input_image_torch = torch.as_tensor(input_image, device=self.device)
+        input_image_torch = torch.as_tensor(input_image, dtype=torch.float, device=self.device)
+
+        if input_image_torch.dim() == 2:
+            # 对于二维张量，假定它是 [H, W]，我们需要添加一个通道维度
+            input_image_torch = input_image_torch.unsqueeze(0)  # 变成 [1, H, W]
+
+
+
+
         input_image_torch = input_image_torch.permute(2, 0, 1).contiguous()[None, :, :, :]
         return input_image_torch
 

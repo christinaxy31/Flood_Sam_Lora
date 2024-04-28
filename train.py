@@ -59,7 +59,13 @@ for epoch in range(num_epochs):
       stk_gt, stk_out = utils.stacking_batch(batch, outputs)
       stk_out = stk_out.squeeze(1)
       stk_gt = stk_gt.unsqueeze(1) # We need to get the [B, C, H, W] starting from [H, W]
+
+      if stk_out.shape != stk_gt.shape:
+          stk_out = F.interpolate(stk_out, stk_gt.shape[2:], mode='bilinear', align_corners=False)
+      print(stk_out.shape)
+      print(stk_gt.float().shape)
       loss = seg_loss(stk_out, stk_gt.float().to(device))
+
       
       optimizer.zero_grad()
       loss.backward()
